@@ -83,7 +83,7 @@ a {
 }
 
 .hero__button {
-    border-radius: 5px;
+    border-radius: 12px;
     padding: 0.75rem 1rem;
     font-weight: 700;
     font-size: large;
@@ -126,11 +126,12 @@ a {
     height: auto;
 }
 
-.section_stack__title {
+.section_stack__title,
+.section_about_me__title {
     font-size: 3rem;
     text-align: center;
     font-weight: 700;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .section_stack_gallery {
@@ -157,6 +158,50 @@ a {
     object-fit: cover;
     object-position:center;
     box-shadow: 0 4px 12px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section_about_me__title{
+    color: var(--color-navy-blue);
+}
+
+.section_about_me__text {
+    text-align: left;
+}
+
+.about_me__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    gap: 6rem;
+}
+
+.about_me__content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the gap as needed */
+}
+
+.section_about_me__text {
+    text-align: justify;
+    font-size: 1.5rem;
+    width: 60%; /* Adjust the width as needed */
+    margin-left: 3rem;
+    margin: auto;
+    height: auto; /* Adjust the height as needed */
+}
+
+.section_about_me__img {
+    width: 30rem;
+    height: 33rem;
+    margin-left: 2rem;
+    margin-right: 3rem;
+    margin: auto;
+    border-radius: 10%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 4px 20px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media(max-width: 1328px) {
@@ -193,13 +238,12 @@ a {
 @media (max-width: 768px) {
     /* Ajustar o menu */
     .menu {
-         /* Empilhar os itens verticalmente */
-        align-items:end; /* Centralizar */
+        align-items: end;
         
     }
     
     .menu__right {
-        gap: 1rem; /* Reduzir o espaço entre os links */
+        gap: 1rem;
         font-size: medium;
     }
 
@@ -209,35 +253,50 @@ a {
 
     .hero__img {
         margin: 2rem auto;
-        position: static; /* Remover o posicionamento absoluto */
+        position: static;
         display: block;
-        width: 40%; /* Tornar a imagem proporcional */
+        width: 40%;
     }
-
-    
 
     .section_stack {
         height: 60vh;
     }
+
     /* Ajustar a seção stack */
     .tech-list {
-        flex-wrap: wrap; /* Permitir quebra de linha */
-        gap: 1rem; /* Adicionar espaçamento entre itens */
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     .tech-list__item {
-        width: 40%; /* Reduzir largura dos itens */
-        margin: 0 auto; /* Centralizar os itens */
+        width: 40%;
+        margin: 0 auto; 
     }
 
     .gallery__img {
         width: 40%;
-        height: auto; /* Tornar a imagem responsiva */
+        height: auto;
     }
 
     .section_stack__title {
-        font-size: 2rem; /* Ajustar tamanho da fonte */
+        font-size: 2rem; 
     }
+
+    .about_me__content {
+        flex-wrap: wrap;
+    }
+
+    .section_about_me__text {
+        width: 100%;
+        height: auto;
+        margin: 1.5rem;   
+    }
+
+    .section_about_me__img {
+        margin: auto;
+    }
+
+    
 }
 
 /* Responsividade adicional para dispositivos muito pequenos (smartphones) */
