@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray: #f5f5f5;
+    --color-royal-blue: #4169e1;
+    --color-navy-blue: #1e3a5f;
+}
+
+body {
+    background-color: var(--color-gray);
+    color: var(--color-black);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--color-navy-blue);
+    color: var(--color-white);
+}
+
+a {
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.menu > div:nth-child(1){
+    font-size: xx-large;
+}
+
+.menu__left {
+    margin-right: auto;
+}
+
+.menu__right {
+    margin-top: 0.7rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.hero {
+    display: flex; /* Exibe os elementos lado a lado */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas menores */
+    padding: 2rem; /* Adiciona espaçamento interno */
+    gap: 2rem; /* Espaço entre a imagem e o texto */
+    height: 80vh;
+    background-color: var(--color-gray);
+}
+
+.hero__content > * {
+    margin-bottom: 1.5rem;
+}
+
+.hero__img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position:center;
+    box-shadow: 0 4px 12px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    color: var(--color-navy-blue);
+    font-weight: 700;
+
+}
+
+.hero__text {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.hero__button {
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    font-size: large;
+    color: var(--color-white);
+    background-color: var(--color-royal-blue);
+    border: var(--color-royal-blue);
+    cursor: pointer;
+}
+    
+
+.hero__button:hover {
+    background-color: var(--color-navy-blue);
+}
+
+.section_stack {
+    background-color: var(--color-navy-blue);
+    height: 90vh;
+    color: var(--color-gray);
+}
+
+.tech-list { 
+    display: flex; 
+    justify-content: center; /* Centraliza os itens horizontalmente */ 
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */ 
+    list-style: none; /* Remove os marcadores padrão da lista */
+}
+
+.tech-list__item {
+    height: 12rem;
+    width: 12rem;
+    margin-right: 4.5rem;
+    margin-left: 4.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.gallery__img {
+    width: 8rem;
+    height: auto;
+}
+
+.section_stack__title {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 2rem;
+}
+
+.section_stack_gallery {
+    display: flex;
+    
+}
+
+.section_about_me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+    height: 80vh;
+    background-color: var(--color-gray);
+    color: var(--color-black);
+}
+
+.section_about_me__img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position:center;
+    box-shadow: 0 4px 12px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 1328px) {
+    .hero__title {
+        font-size: 2rem; /* Ajustar tamanho da fonte */
+    }
+
+    .hero__text {
+        font-size: 1.25rem;
+    }
+
+    
+}
+
+@media(max-width: 1185px){
+    .hero {
+        height: 40vh;
+    }
+    
+    .hero__title, .hero__text, .hero__button {
+        position: static; /* Remover posicionamento absoluto */
+        margin: 1rem 0;
+        text-align: center; /* Centralizar texto */
+    }
+    .hero__button {
+        display: block; /* Faz o botão ocupar toda a linha */
+        margin: 2rem auto; /* Centraliza horizontalmente */
+        text-align: center; /* Garante que o texto dentro fique centralizado */
+        padding: 0.5rem 1rem; /* Reduzir tamanho do botão */
+    }
+}
+
+/* Responsividade geral para dispositivos pequenos */
+@media (max-width: 768px) {
+    /* Ajustar o menu */
+    .menu {
+         /* Empilhar os itens verticalmente */
+        align-items:end; /* Centralizar */
+        
+    }
+    
+    .menu__right {
+        gap: 1rem; /* Reduzir o espaço entre os links */
+        font-size: medium;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+    .hero__img {
+        margin: 2rem auto;
+        position: static; /* Remover o posicionamento absoluto */
+        display: block;
+        width: 40%; /* Tornar a imagem proporcional */
+    }
+
+    
+
+    .section_stack {
+        height: 60vh;
+    }
+    /* Ajustar a seção stack */
+    .tech-list {
+        flex-wrap: wrap; /* Permitir quebra de linha */
+        gap: 1rem; /* Adicionar espaçamento entre itens */
+    }
+
+    .tech-list__item {
+        width: 40%; /* Reduzir largura dos itens */
+        margin: 0 auto; /* Centralizar os itens */
+    }
+
+    .gallery__img {
+        width: 40%;
+        height: auto; /* Tornar a imagem responsiva */
+    }
+
+    .section_stack__title {
+        font-size: 2rem; /* Ajustar tamanho da fonte */
+    }
+}
+
+/* Responsividade adicional para dispositivos muito pequenos (smartphones) */
+@media (max-width: 480px) {
+    .hero__img {
+        width: 70%;
+    }
+
+    .hero__title {
+        font-size: 1.5rem;
+    }
+
+    .hero__text {
+        font-size: 1rem;
+    }
+
+    .hero__button {
+        font-size: 0.9rem;
+    }
+
+    .tech-list__item {
+        width: 90%; /* Usar quase toda a largura da tela */
+    }
+}
